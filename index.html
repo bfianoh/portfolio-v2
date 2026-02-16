@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio | IT & Network Specialist</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        .hero-video {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            min-width: 100%;
+            min-height: 100%;
+            width: auto;
+            height: auto;
+            transform: translate(-50%, -50%);
+            z-index: -1;
+            object-fit: cover;
+        }
+        .overlay {
+            background: rgba(0, 0, 0, 0.4);
+        }
+    </style>
+</head>
+<body class="bg-white text-gray-900 font-sans">
+
+    <nav class="fixed w-full z-50 flex justify-between items-center px-10 py-6 bg-transparent text-white hover:bg-white hover:text-black transition-all duration-300">
+        <div class="text-xl font-bold tracking-tighter">YOUR NAME</div>
+        <div class="space-x-8 text-sm font-medium uppercase tracking-widest">
+            <a href="#experience">Experience</a>
+            <a href="#projects">Projects</a>
+            <a href="#contact">Contact</a>
+        </div>
+    </nav>
+
+    <section class="relative h-screen flex items-center justify-center overflow-hidden">
+        <video autoplay muted loop playsinline class="hero-video">
+            <source src="your-video-here.mp4" type="video/mp4">
+        </video>
+        <div class="overlay absolute inset-0"></div>
+        <div class="relative z-10 text-center text-white">
+            <h1 class="text-6xl font-bold mb-4 tracking-tight">IT & Network Portfolio</h1>
+            <p class="text-lg opacity-80 uppercase tracking-widest">Designing, Securing, & Optimizing Infrastructure</p>
+        </div>
+    </section>
+
+    <section id="experience" class="py-24 px-10 max-w-5xl mx-auto">
+        <h2 class="text-3xl font-bold mb-12 border-b pb-4">Experience</h2>
+        <div class="space-y-12">
+            <div class="flex flex-col md:flex-row gap-8 items-start">
+                <div class="w-20 h-20 bg-gray-100 flex-shrink-0 flex items-center justify-center">
+                    <img src="logo1.png" alt="Company" class="p-2">
+                </div>
+                <div>
+                    <h3 class="text-xl font-bold">Junior IT / Network Specialist</h3>
+                    <p class="text-gray-500 uppercase text-xs mb-2">Jan 2026 - Present • Chicago, IL</p>
+                    <p class="text-gray-700 leading-relaxed">Briefly describe your core impact here. Focus on the tech stack and successful deployments.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects" class="py-24 bg-gray-50 px-10">
+        <div class="max-w-6xl mx-auto">
+            <h2 class="text-3xl font-bold mb-12">Projects</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="group cursor-pointer overflow-hidden bg-white shadow-sm hover:shadow-xl transition-all">
+                    <div class="h-64 overflow-hidden relative">
+                        <video muted loop onmouseover="this.play()" onmouseout="this.pause()" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500">
+                            <source src="project-preview.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                    <div class="p-6">
+                        <p class="text-xs text-blue-600 font-bold uppercase mb-1">Network Security</p>
+                        <h4 class="text-lg font-bold">Firewall Deployment & VPN Config</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+</body>
+</html>
